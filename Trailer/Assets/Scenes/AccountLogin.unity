@@ -805,7 +805,7 @@ RectTransform:
   m_AnchorMin: {x: 0.5, y: 0}
   m_AnchorMax: {x: 0.5, y: 0}
   m_AnchoredPosition: {x: 0, y: 200}
-  m_SizeDelta: {x: 160, y: 30}
+  m_SizeDelta: {x: 550, y: 50}
   m_Pivot: {x: 0.5, y: 1}
 --- !u!114 &1109676518
 MonoBehaviour:
@@ -1461,10 +1461,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 2114260764}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c63033d7c1e56354bb42ce10f1e98948, type: 3}
+  m_Script: {fileID: 11500000, guid: eea16927cea4f4e0a9ad2d33d977fda8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   baseUrl: http://localhost/ThirteeNov/UnityLoginLogoutRegister/
-  accountUserName: {fileID: 1066447679}
-  accountPassword: {fileID: 1166152247}
-  info: {fileID: 756632072}
+  accountUserName: {fileID: 0}
+  accountPassword: {fileID: 0}
+  info: {fileID: 0}
