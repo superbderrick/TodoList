@@ -1465,6 +1465,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   baseUrl: http://localhost/ThirteeNov/UnityLoginLogoutRegister/
-  accountUserName: {fileID: 0}
-  accountPassword: {fileID: 0}
-  info: {fileID: 0}
+  accountUserName: {fileID: 1066447679}
+  accountPassword: {fileID: 1166152247}
+  info: {fileID: 756632072}
