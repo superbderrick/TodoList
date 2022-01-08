@@ -9,7 +9,10 @@ data class ActionItem(
     @ColumnInfo(name = "item_name")
     var name: String,
     @ColumnInfo(name = "item_amount")
-    var amount: Int
+    var amount: Int,
+
+    @ColumnInfo(name = "item_staus")
+var status: Boolean
 ) {
     @PrimaryKey(autoGenerate = true)
     var id: Int? = null
