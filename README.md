@@ -1,3 +1,3 @@
-# MVVMSmaple
-Android MVVM Architecture Sample 
+# MVVMSample
+Android MVVM Architecture sample 
 
