@@ -27,25 +27,24 @@ class ActionItemAdapter(
     override fun onBindViewHolder(holder: ActionItemViewHolder, position: Int) {
         val curActionItem = items[position]
 
-
         holder.itemView.tvName.text = curActionItem.name
-        holder.itemView.tvAmount.text = "${curActionItem.amount}"
+        holder.itemView.tvAmount.text = "${curActionItem.status}"
 
         holder.itemView.ivDelete.setOnClickListener {
             viewModel.delete(curActionItem)
         }
 
-        holder.itemView.ivPlus.setOnClickListener {
-            curActionItem.amount++
-            viewModel.upsert(curActionItem)
-        }
-
-        holder.itemView.ivMinus.setOnClickListener {
-            if(curActionItem.amount > 0) {
-                curActionItem.amount--
-                viewModel.upsert(curActionItem)
-            }
-        }
+//        holder.itemView.ivPlus.setOnClickListener {
+////            curActionItem.amount++
+////            viewModel.upsert(curActionItem)
+//        }
+//
+//        holder.itemView.ivMinus.setOnClickListener {
+//            if(curActionItem.amount > 0) {
+//                curActionItem.amount--
+//                viewModel.upsert(curActionItem)
+//            }
+//        }
     }
 
     inner class ActionItemViewHolder(itemView: View): RecyclerView.ViewHolder(itemView)

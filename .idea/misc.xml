@@ -6,6 +6,7 @@
         <entry key="../../../../../layout/custom_preview.xml" value="0.17708333333333334" />
         <entry key="app/src/main/res/drawable-anydpi/ic_add.xml" value="0.26927083333333335" />
         <entry key="app/src/main/res/drawable-anydpi/ic_delete.xml" value="0.215625" />
+        <entry key="app/src/main/res/drawable-anydpi/ic_edit.xml" value="0.2928205128205128" />
         <entry key="app/src/main/res/layout/action_item.xml" value="0.28125" />
         <entry key="app/src/main/res/layout/activity_main.xml" value="0.19947916666666668" />
         <entry key="app/src/main/res/layout/dialog_add_action_item.xml" value="0.335" />
