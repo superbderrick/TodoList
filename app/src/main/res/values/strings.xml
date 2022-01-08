@@ -1,4 +1,4 @@
 <resources>
     <string name="app_name">TodoList</string>
-    <string name="add_actionitem">Add a new Action Item</string>
+    <string name="add_actionitem">Add A New Action Item</string>
 </resources>

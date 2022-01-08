@@ -20,13 +20,12 @@ class AddActionItemDialog(context: Context, var addDialogListener: AddDialogList
 
         tvAdd.setOnClickListener {
             val name = etName.text.toString()
-            val amount = etAmount.text.toString().toInt()
             if(name.isNullOrEmpty()) {
                 Toast.makeText(context, "Please enter a name", Toast.LENGTH_SHORT).show()
                 return@setOnClickListener
             }
 
-            val item = ActionItem(name, amount,false)
+            val item = ActionItem(name, 0,false)
             addDialogListener.onAddButtonClicked(item)
             dismiss()
         }
