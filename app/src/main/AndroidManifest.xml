@@ -8,10 +8,10 @@
         android:label="@string/app_name"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
-        android:name="jinyoung.dev.todolist.ShoppingApplication"
+        android:name="jinyoung.dev.todolist.TodoListApplication"
         android:theme="@style/Theme.MVVMSample">
         <activity
-            android:name="jinyoung.dev.todolist.ui.shopinglist.MainActivity"
+            android:name="jinyoung.dev.todolist.ui.actionitem.MainActivity"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

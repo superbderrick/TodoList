@@ -1,9 +1,9 @@
 package jinyoung.dev.todolist
 
 import android.app.Application
-import jinyoung.dev.todolist.data.db.ShoppingDatabase
-import jinyoung.dev.todolist.repositories.ShoppingRepository
-import jinyoung.dev.todolist.ui.shopinglist.ShoppingViewModelFactory
+import jinyoung.dev.todolist.data.db.ActionDatabase
+import jinyoung.dev.todolist.repositories.ActionRepository
+import jinyoung.dev.todolist.ui.actionitem.ActionItemViewModelFactory
 
 import org.kodein.di.Kodein
 import org.kodein.di.KodeinAware
@@ -13,18 +13,18 @@ import org.kodein.di.generic.instance
 import org.kodein.di.generic.provider
 import org.kodein.di.generic.singleton
 
-class ShoppingApplication: Application(), KodeinAware {
+class TodoListApplication: Application(), KodeinAware {
 
     override val kodein: Kodein = Kodein.lazy {
-        import(androidXModule(this@ShoppingApplication))
-        bind() from singleton { ShoppingDatabase(instance()) }
+        import(androidXModule(this@TodoListApplication))
+        bind() from singleton { ActionDatabase(instance()) }
         bind() from singleton {
-            ShoppingRepository(
+            ActionRepository(
                 instance()
             )
         }
         bind() from provider {
-            ShoppingViewModelFactory(
+            ActionItemViewModelFactory(
                 instance()
             )
         }

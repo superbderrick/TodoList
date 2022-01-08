@@ -1,4 +1,4 @@
-package jinyoung.dev.todolist.ui.shopinglist
+package jinyoung.dev.todolist.ui.actionitem
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
@@ -7,9 +7,9 @@ import androidx.lifecycle.ViewModelProvider
 import androidx.recyclerview.widget.LinearLayoutManager
 
 import jinyoung.dev.todolist.R
-import jinyoung.dev.todolist.data.db.entities.ShoppingItem
+import jinyoung.dev.todolist.data.db.entities.ActionItem
 import jinyoung.dev.todolist.ui.AddDialogListener
-import jinyoung.dev.todolist.ui.AddShoppingItemDialog
+import jinyoung.dev.todolist.ui.AddActionItemDialog
 import jinyoung.dev.todolist.ui.adapter.ActionItemAdapter
 import kotlinx.android.synthetic.main.activity_main.*
 import org.kodein.di.KodeinAware
@@ -19,7 +19,7 @@ import org.kodein.di.generic.instance
 class MainActivity : AppCompatActivity() , KodeinAware {
 
     override val kodein by kodein()
-    private val factory: ShoppingViewModelFactory by instance()
+    private val factory: ActionItemViewModelFactory by instance()
 
     lateinit var viewModel: ActionItemViewModel
 
@@ -31,19 +31,19 @@ class MainActivity : AppCompatActivity() , KodeinAware {
 
         val adapter = ActionItemAdapter(listOf(), viewModel)
 
-        rvShoppingItems.layoutManager = LinearLayoutManager(this)
-        rvShoppingItems.adapter = adapter
+        rvActionItems.layoutManager = LinearLayoutManager(this)
+        rvActionItems.adapter = adapter
 
-        viewModel.getAllShoppingItems().observe(this, Observer {
+        viewModel.getAllActionItems().observe(this, Observer {
             adapter.items = it
             adapter.notifyDataSetChanged()
         })
 
         fab.setOnClickListener {
-            AddShoppingItemDialog(
+            AddActionItemDialog(
                 this,
                 object : AddDialogListener {
-                    override fun onAddButtonClicked(item: ShoppingItem) {
+                    override fun onAddButtonClicked(item: ActionItem) {
                         viewModel.upsert(item)
                     }
                 }).show()

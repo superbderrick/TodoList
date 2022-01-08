@@ -5,48 +5,48 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
 import jinyoung.dev.todolist.R
-import jinyoung.dev.todolist.data.db.entities.ShoppingItem
-import jinyoung.dev.todolist.ui.shopinglist.ActionItemViewModel
-import kotlinx.android.synthetic.main.shopping_item.view.*
+import jinyoung.dev.todolist.data.db.entities.ActionItem
+import jinyoung.dev.todolist.ui.actionitem.ActionItemViewModel
+import kotlinx.android.synthetic.main.action_item.view.*
 
 
 class ActionItemAdapter(
-    var items: List<ShoppingItem>,
+    var items: List<ActionItem>,
     private val viewModel: ActionItemViewModel
-): RecyclerView.Adapter<ActionItemAdapter.ShoppingViewHolder>() {
+): RecyclerView.Adapter<ActionItemAdapter.ActionItemViewHolder>() {
 
-    override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ShoppingViewHolder {
-        val view = LayoutInflater.from(parent.context).inflate(R.layout.shopping_item, parent, false)
-        return ShoppingViewHolder(view)
+    override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ActionItemViewHolder {
+        val view = LayoutInflater.from(parent.context).inflate(R.layout.action_item, parent, false)
+        return ActionItemViewHolder(view)
     }
 
     override fun getItemCount(): Int {
         return items.size
     }
 
-    override fun onBindViewHolder(holder: ShoppingViewHolder, position: Int) {
-        val curShoppingItem = items[position]
+    override fun onBindViewHolder(holder: ActionItemViewHolder, position: Int) {
+        val curActionItem = items[position]
 
 
-        holder.itemView.tvName.text = curShoppingItem.name
-        holder.itemView.tvAmount.text = "${curShoppingItem.amount}"
+        holder.itemView.tvName.text = curActionItem.name
+        holder.itemView.tvAmount.text = "${curActionItem.amount}"
 
         holder.itemView.ivDelete.setOnClickListener {
-            viewModel.delete(curShoppingItem)
+            viewModel.delete(curActionItem)
         }
 
         holder.itemView.ivPlus.setOnClickListener {
-            curShoppingItem.amount++
-            viewModel.upsert(curShoppingItem)
+            curActionItem.amount++
+            viewModel.upsert(curActionItem)
         }
 
         holder.itemView.ivMinus.setOnClickListener {
-            if(curShoppingItem.amount > 0) {
-                curShoppingItem.amount--
-                viewModel.upsert(curShoppingItem)
+            if(curActionItem.amount > 0) {
+                curActionItem.amount--
+                viewModel.upsert(curActionItem)
             }
         }
     }
 
-    inner class ShoppingViewHolder(itemView: View): RecyclerView.ViewHolder(itemView)
+    inner class ActionItemViewHolder(itemView: View): RecyclerView.ViewHolder(itemView)
 }
