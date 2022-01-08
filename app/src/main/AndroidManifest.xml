@@ -10,7 +10,7 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.MVVMSample">
         <activity
-            android:name=".ShoppingActivity"
+            android:name=".ui.shopinglist.ShoppingActivity"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
