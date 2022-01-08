@@ -1,13 +1,13 @@
-package jinyoung.dev.mvvmsample.ui.shopinglist
+package jinyoung.dev.todolist.ui.shopinglist
 
 import androidx.lifecycle.ViewModel
-import jinyoung.dev.mvvmsample.data.db.entities.ShoppingItem
-import jinyoung.dev.mvvmsample.repositories.ShoppingRepository
+import jinyoung.dev.todolist.data.db.entities.ShoppingItem
+import jinyoung.dev.todolist.repositories.ShoppingRepository
 import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.launch
 
-class ShoppingViewModel(
+class ActionItemViewModel(
     private val repository : ShoppingRepository
 ) : ViewModel(){
     fun upsert(item: ShoppingItem) = CoroutineScope(Dispatchers.Main).launch {

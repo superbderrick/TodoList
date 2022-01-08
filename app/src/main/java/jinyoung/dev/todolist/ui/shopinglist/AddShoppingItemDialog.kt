@@ -1,4 +1,4 @@
-package jinyoung.dev.mvvmsample.ui
+package jinyoung.dev.todolist.ui
 
 import android.content.Context
 import android.os.Bundle
@@ -7,8 +7,8 @@ import android.widget.EditText
 import android.widget.TextView
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatDialog
-import jinyoung.dev.mvvmsample.R
-import jinyoung.dev.mvvmsample.data.db.entities.ShoppingItem
+import jinyoung.dev.todolist.R
+import jinyoung.dev.todolist.data.db.entities.ShoppingItem
 
 class AddShoppingItemDialog(context: Context, var addDialogListener: AddDialogListener) :
     AppCompatDialog(context) {

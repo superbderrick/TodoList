@@ -1,8 +1,8 @@
-package jinyoung.dev.mvvmsample.data.db
+package jinyoung.dev.todolist.data.db
 
 import androidx.lifecycle.LiveData
 import androidx.room.*
-import jinyoung.dev.mvvmsample.data.db.entities.ShoppingItem
+import jinyoung.dev.todolist.data.db.entities.ShoppingItem
 
 @Dao
 interface ShoppingDao {

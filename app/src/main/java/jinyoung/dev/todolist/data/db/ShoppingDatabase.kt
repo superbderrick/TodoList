@@ -1,10 +1,10 @@
-package jinyoung.dev.mvvmsample.data.db
+package jinyoung.dev.todolist.data.db
 
 import android.content.Context
 import androidx.room.Database
 import androidx.room.Room
 import androidx.room.RoomDatabase
-import jinyoung.dev.mvvmsample.data.db.entities.ShoppingItem
+import jinyoung.dev.todolist.data.db.entities.ShoppingItem
 
 @Database(
     entities = [ShoppingItem::class],

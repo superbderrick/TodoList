@@ -1,9 +1,9 @@
-package jinyoung.dev.mvvmsample
+package jinyoung.dev.todolist
 
 import android.app.Application
-import jinyoung.dev.mvvmsample.data.db.ShoppingDatabase
-import jinyoung.dev.mvvmsample.repositories.ShoppingRepository
-import jinyoung.dev.mvvmsample.ui.shopinglist.ShoppingViewModelFactory
+import jinyoung.dev.todolist.data.db.ShoppingDatabase
+import jinyoung.dev.todolist.repositories.ShoppingRepository
+import jinyoung.dev.todolist.ui.shopinglist.ShoppingViewModelFactory
 
 import org.kodein.di.Kodein
 import org.kodein.di.KodeinAware

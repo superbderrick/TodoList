@@ -1,19 +1,19 @@
-package jinyoung.dev.mvvmsample.ui.adapter
+package jinyoung.dev.todolist.ui.adapter
 
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
-import jinyoung.dev.mvvmsample.R
-import jinyoung.dev.mvvmsample.data.db.entities.ShoppingItem
-import jinyoung.dev.mvvmsample.ui.shopinglist.ShoppingViewModel
+import jinyoung.dev.todolist.R
+import jinyoung.dev.todolist.data.db.entities.ShoppingItem
+import jinyoung.dev.todolist.ui.shopinglist.ActionItemViewModel
 import kotlinx.android.synthetic.main.shopping_item.view.*
 
 
-class ShoppingItemAdapter(
+class ActionItemAdapter(
     var items: List<ShoppingItem>,
-    private val viewModel: ShoppingViewModel
-): RecyclerView.Adapter<ShoppingItemAdapter.ShoppingViewHolder>() {
+    private val viewModel: ActionItemViewModel
+): RecyclerView.Adapter<ActionItemAdapter.ShoppingViewHolder>() {
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ShoppingViewHolder {
         val view = LayoutInflater.from(parent.context).inflate(R.layout.shopping_item, parent, false)

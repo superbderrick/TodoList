@@ -6,7 +6,7 @@
     android:padding="16dp"
     android:background="@color/lightergrey2"
     android:layout_height="match_parent"
-    tools:context=".ui.shopinglist.ShoppingActivity">
+    tools:context=".ui.shopinglist.MainActivity">
 
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/rvShoppingItems"

@@ -1,13 +1,13 @@
-package jinyoung.dev.mvvmsample.ui.shopinglist
+package jinyoung.dev.todolist.ui.shopinglist
 
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.ViewModelProvider
-import jinyoung.dev.mvvmsample.repositories.ShoppingRepository
+import jinyoung.dev.todolist.repositories.ShoppingRepository
 
 class ShoppingViewModelFactory(
     private val repository : ShoppingRepository
 )  : ViewModelProvider.NewInstanceFactory(){
     override fun <T : ViewModel?> create(modelClass: Class<T>): T {
-        return ShoppingViewModel(repository) as T
+        return ActionItemViewModel(repository) as T
     }
 }

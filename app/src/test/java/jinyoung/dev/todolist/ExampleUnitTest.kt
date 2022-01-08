@@ -1,4 +1,4 @@
-package jinyoung.dev.mvvmsample
+package jinyoung.dev.todolist
 
 import org.junit.Test
 

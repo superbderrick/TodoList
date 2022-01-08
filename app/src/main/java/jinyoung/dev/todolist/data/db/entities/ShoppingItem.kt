@@ -1,4 +1,4 @@
-package jinyoung.dev.mvvmsample.data.db.entities
+package jinyoung.dev.todolist.data.db.entities
 
 import androidx.room.ColumnInfo
 import androidx.room.Entity

@@ -1,4 +1,4 @@
-package jinyoung.dev.mvvmsample.ui.shopinglist
+package jinyoung.dev.todolist.ui.shopinglist
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
@@ -6,30 +6,30 @@ import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProvider
 import androidx.recyclerview.widget.LinearLayoutManager
 
-import jinyoung.dev.mvvmsample.R
-import jinyoung.dev.mvvmsample.data.db.entities.ShoppingItem
-import jinyoung.dev.mvvmsample.ui.AddDialogListener
-import jinyoung.dev.mvvmsample.ui.AddShoppingItemDialog
-import jinyoung.dev.mvvmsample.ui.adapter.ShoppingItemAdapter
-import kotlinx.android.synthetic.main.activity_shopping.*
+import jinyoung.dev.todolist.R
+import jinyoung.dev.todolist.data.db.entities.ShoppingItem
+import jinyoung.dev.todolist.ui.AddDialogListener
+import jinyoung.dev.todolist.ui.AddShoppingItemDialog
+import jinyoung.dev.todolist.ui.adapter.ActionItemAdapter
+import kotlinx.android.synthetic.main.activity_main.*
 import org.kodein.di.KodeinAware
 import org.kodein.di.android.kodein
 import org.kodein.di.generic.instance
 
-class ShoppingActivity : AppCompatActivity() , KodeinAware {
+class MainActivity : AppCompatActivity() , KodeinAware {
 
     override val kodein by kodein()
     private val factory: ShoppingViewModelFactory by instance()
 
-    lateinit var viewModel: ShoppingViewModel
+    lateinit var viewModel: ActionItemViewModel
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_shopping)
+        setContentView(R.layout.activity_main)
 
-        viewModel = ViewModelProvider(this, factory).get(ShoppingViewModel::class.java)
+        viewModel = ViewModelProvider(this, factory).get(ActionItemViewModel::class.java)
 
-        val adapter = ShoppingItemAdapter(listOf(), viewModel)
+        val adapter = ActionItemAdapter(listOf(), viewModel)
 
         rvShoppingItems.layoutManager = LinearLayoutManager(this)
         rvShoppingItems.adapter = adapter

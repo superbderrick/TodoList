@@ -1,7 +1,7 @@
-package jinyoung.dev.mvvmsample.repositories
+package jinyoung.dev.todolist.repositories
 
-import jinyoung.dev.mvvmsample.data.db.ShoppingDatabase
-import jinyoung.dev.mvvmsample.data.db.entities.ShoppingItem
+import jinyoung.dev.todolist.data.db.ShoppingDatabase
+import jinyoung.dev.todolist.data.db.entities.ShoppingItem
 
 class ShoppingRepository(
     private val db: ShoppingDatabase
