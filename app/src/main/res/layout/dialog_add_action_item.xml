@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="450dip"
+    android:layout_height="450dip"
+    android:orientation="vertical">
+
+    <TextView
+        android:id="@+id/tvTitle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/add_actionitem"
+        android:padding="5dp"
+        android:textColor="@android:color/black"
+        android:layout_gravity="center_horizontal"
+        android:textSize="20sp" />
+
+    <EditText
+        android:layout_marginTop="16dip"
+        android:id="@+id/etName"
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:ems="10"
+        android:hint="Today I am going to do ..."
+        android:inputType="text"
+        android:textColor="@android:color/black"
+/>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="100dp">
+
+        <TextView
+            android:id="@+id/tvAdd"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:text="ADD"
+            android:textColor="@android:color/black"
+            android:textSize="18sp"
+            android:padding="10dp"
+            />
+
+        <TextView
+            android:id="@+id/tvCancel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toLeftOf="@+id/tvAdd"
+            android:layout_centerInParent="true"
+            android:layout_marginTop="41dp"
+            android:padding="10dp"
+            android:text="CANCEL"
+            android:textColor="@android:color/black"
+            android:textSize="18sp" />
+
+    </RelativeLayout>
+
+</LinearLayout>

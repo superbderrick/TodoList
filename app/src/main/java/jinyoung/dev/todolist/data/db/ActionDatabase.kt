@@ -1,22 +1,22 @@
-package jinyoung.dev.mvvmsample.data.db
+package jinyoung.dev.todolist.data.db
 
 import android.content.Context
 import androidx.room.Database
 import androidx.room.Room
 import androidx.room.RoomDatabase
-import jinyoung.dev.mvvmsample.data.db.entities.ShoppingItem
+import jinyoung.dev.todolist.data.db.entities.ActionItem
 
 @Database(
-    entities = [ShoppingItem::class],
+    entities = [ActionItem::class],
     version = 1
 )
-abstract class ShoppingDatabase: RoomDatabase() {
+abstract class ActionDatabase: RoomDatabase() {
 
-    abstract fun getShoppingDao(): ShoppingDao
+    abstract fun getActionDao(): ActionDao
 
     companion object {
         @Volatile
-        private var instance: ShoppingDatabase? = null
+        private var instance: ActionDatabase? = null
         private val LOCK = Any()
 
         operator fun invoke(context: Context) = instance
@@ -29,6 +29,6 @@ abstract class ShoppingDatabase: RoomDatabase() {
 
         private fun createDatabase(context: Context) =
             Room.databaseBuilder(context.applicationContext,
-                ShoppingDatabase::class.java, "ShoppingDB.db").build()
+                ActionDatabase::class.java, "ActionItemDB.db").build()
     }
 }

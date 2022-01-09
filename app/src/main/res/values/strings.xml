@@ -1,3 +1,4 @@
 <resources>
-    <string name="app_name">MVVMSample</string>
+    <string name="app_name">TodoList</string>
+    <string name="add_actionitem">Add A New Action Item</string>
 </resources>

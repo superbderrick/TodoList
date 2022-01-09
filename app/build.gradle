@@ -2,13 +2,14 @@ plugins {
     id 'com.android.application'
     id 'kotlin-android'
     id 'kotlin-kapt'
+    id 'kotlin-android-extensions'
 }
 
 android {
     compileSdk 31
 
     defaultConfig {
-        applicationId "jinyoung.dev.mvvmsample"
+        applicationId "jinyoung.dev.todolist"
         minSdk 21
         targetSdk 31
         versionCode 1
@@ -16,6 +17,8 @@ android {
 
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
     }
+
+
 
     buildTypes {
         release {
@@ -30,6 +33,7 @@ android {
     kotlinOptions {
         jvmTarget = '1.8'
     }
+
 }
 
 dependencies {
