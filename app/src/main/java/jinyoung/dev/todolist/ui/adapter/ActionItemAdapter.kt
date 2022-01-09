@@ -28,23 +28,18 @@ class ActionItemAdapter(
         val curActionItem = items[position]
 
         holder.itemView.tvName.text = curActionItem.name
-        holder.itemView.tvAmount.text = "${curActionItem.status}"
+        holder.itemView.statusCheckBox.isChecked = curActionItem.status
 
         holder.itemView.ivDelete.setOnClickListener {
             viewModel.delete(curActionItem)
         }
 
-//        holder.itemView.ivPlus.setOnClickListener {
-////            curActionItem.amount++
-////            viewModel.upsert(curActionItem)
-//        }
-//
-//        holder.itemView.ivMinus.setOnClickListener {
-//            if(curActionItem.amount > 0) {
-//                curActionItem.amount--
-//                viewModel.upsert(curActionItem)
-//            }
-//        }
+        holder.itemView.statusCheckBox.setOnCheckedChangeListener{ _, isChecked ->
+            curActionItem.status = isChecked
+            viewModel.upsert(curActionItem)
+        }
+
+
     }
 
     inner class ActionItemViewHolder(itemView: View): RecyclerView.ViewHolder(itemView)
