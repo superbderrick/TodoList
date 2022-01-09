@@ -6,6 +6,7 @@ You can simply check and know the techniques below
 - MVVM Architecture
 - Coroutines basic
 - Defedency Injetion with Kodein-DI
+- Live Data 
 
 
 ### Demo
