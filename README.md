@@ -10,7 +10,9 @@ You can simply check and know the techniques below
 - Defedency Injetion with Kodein-DI
 
 
-# Demo
+## Demo
+
+https://github.com/superbderrick/TodoList/blob/main/demo.gif?raw=true
 
 
 
