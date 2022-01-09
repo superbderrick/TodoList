@@ -1,7 +1,5 @@
 # Todolist
 Android Todolist simple app for leanring MVVM Architecture
-
-
 You can simply check and know the techniques below
 
 - Room
@@ -10,9 +8,8 @@ You can simply check and know the techniques below
 - Defedency Injetion with Kodein-DI
 
 
-## Demo
-
-https://github.com/superbderrick/TodoList/blob/main/demo.gif?raw=true
+### Demo
+![](https://github.com/superbderrick/TodoList/blob/main/demo.gif?raw=true)
 
 
 
