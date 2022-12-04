@@ -5,7 +5,7 @@ You can simply check and know the techniques below
 - Room
 - MVVM Architecture
 - Coroutines basic
-- Defedency Injetion with Kodein-DI
+- Depedency Injetion with Kodein-DI
 - Live Data 
 
 
